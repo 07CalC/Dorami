@@ -14,7 +14,7 @@ const UserContextProvider=({children})=>{
             const csrftoken=getCSRFTokenFromCookie();
 
             try{
-                const response=await fetch('http://51.79.173.35:8000/auth/getUser',{
+                const response=await fetch('https://backend.dorami.tanish.site/auth/getUser',{
                     method: "GET",
                     headers: {
                         "Content-Type": "application/json",

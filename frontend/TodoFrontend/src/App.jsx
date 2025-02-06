@@ -22,7 +22,7 @@ import { TodoContextProvider } from "./context/TodoContext";
 function App() {
   // useEffect(() => {
 
-  //   fetch('http://51.79.173.35:8000/auth/csrf/', {
+  //   fetch('https://backend.dorami.tanish.site/auth/csrf/', {
   //     method: 'GET',
   //     credentials: 'include',
   //   })

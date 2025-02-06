@@ -21,7 +21,7 @@ const SignIn = () => {
     
     try {
       
-      const response = await fetch("http://51.79.173.35:8000/auth/login/", {
+      const response = await fetch("https://backend.dorami.tanish.site/auth/login/", {
         method: "POST",
         headers: {
           "Content-Type": "application/json",
