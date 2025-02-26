@@ -10,7 +10,7 @@ export const TodoContextProvider=({children})=>{
     const getTodo=async ()=>{
         try {
           const csrftoken=getCSRFTokenFromCookie();
-          const response = await fetch("http://localhost:8000/todos/", {
+          const response = await fetch("https://backend.dorami.tanish.site/todos/", {
             method: "GET",
             headers: {
               "Content-Type": "application/json",

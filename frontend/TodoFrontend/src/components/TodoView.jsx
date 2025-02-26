@@ -45,7 +45,7 @@ const TodoView = () => {
         return;
       }
 
-      const response = await fetch(`http://localhost:8000/todos/${todoId}`, {
+      const response = await fetch(`https://backend.dorami.tanish.site/todos/${todoId}`, {
         method: "DELETE",
         headers: {
           "Content-Type": "application/json", 
@@ -72,7 +72,7 @@ const TodoView = () => {
         return;
       }
 
-      const response = await fetch(`http://localhost:8000/todos/${todoId}`, {
+      const response = await fetch(`https://backend.dorami.tanish.site/todos/${todoId}`, {
         method: "PUT",
         body:JSON.stringify({
           "completed" : true
@@ -102,8 +102,9 @@ const TodoView = () => {
   };
 
   return (
-    <div className="todoview">
-      <div className="flex justify-between items-center pt-5 w-full mb-6">
+    <div className="todoview w-full h-full">
+      <div className="flex justify-between items-center pt-2 w-full mb-6">
+        <div></div>
         <p className="text-2xl font-semibold">Tasks</p>
         <button
           onClick={openCreateTodoModal}
@@ -120,7 +121,7 @@ const TodoView = () => {
         />
       )}
 
-      <div className="cards pt-6">
+      <div className="cards pt-6 w-full h-full">
         <CardList todos={todos} onDeleteTodo={handleTodoDeleted} onCompletedTodo={handleTodoCompleted} />
       </div>
     </div>

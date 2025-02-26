@@ -25,7 +25,7 @@ const DashboardMain = () => {
         return;
       }
 
-      const response = await fetch(`http://localhost:8000/todos/${todoId}`, {
+      const response = await fetch(`https://backend.dorami.tanish.site/todos/${todoId}`, {
         method: "PUT",
         body: JSON.stringify({
           completed: true,

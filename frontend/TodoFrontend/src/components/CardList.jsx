@@ -26,9 +26,10 @@ const CardList = ({todos,onDeleteTodo,onCompletedTodo}) => {
 
 
   return (
-    <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-6 justify-center items-center">
-      {filterTodos.length > 0 ? (
-        filterTodos.map((todo, index) => (
+    <>
+      {filterTodos.length > 0 && (
+       <div className="grid w-full h-full grid-cols-1 md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-6 justify-center items-center">
+        {filterTodos.map((todo, index) => (
           <Card
             key={todo.id}
             id={todo.id}
@@ -40,11 +41,16 @@ const CardList = ({todos,onDeleteTodo,onCompletedTodo}) => {
             onCompletedTodo={()=>onCompletedTodo(todo.id)}
             completed={todo.completed}
           />
-        ))
-      ) : (
-        <p className="text-center">No todos for this day</p>
+        ))}
+        </div>
+      )} 
+      {filterTodos.length === 0 && (
+        <div className="w-full h-full p-8 flex items-center justify-center">
+        <img src="https://cdn.dribbble.com/userupload/23376562/file/original-ac0acdba9a5ef7169322a147bb2005e2.jpg?resize=752x&vertical=center" alt="No todos for today" className="sm:w-1/2 w-full" />
+        </div>
       )}
-    </div>
+      
+      </>
   );
 };
 

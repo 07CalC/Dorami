@@ -21,7 +21,7 @@ const CreateTodo = ({ onClose, onTodoAdded }) => {
     try {
       
       
-      const response = await fetch("http://localhost:8000/todos/create/", {
+      const response = await fetch("https://backend.dorami.tanish.site/todos/create/", {
         method: "POST",
         
         headers: {
